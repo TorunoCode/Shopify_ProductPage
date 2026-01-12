@@ -1,0 +1,174 @@
+
+// Variables
+$brand-green: #039869;
+$mobile-breakpoint: 678px;
+$bg-gray: #f7f7f7;
+$bg-pink: #ffe3e3;
+$text-green-dark: #0c7c00;
+$text-red-dark: #a60003;
+
+.product_judge-outer {
+    padding: 56px 0;
+
+    .product_judge-container {
+        max-width: 800px;
+        margin: auto;
+
+        .product-section_title {
+            font-size: 32px;
+            line-height: 1.3em;
+            margin: 16px 0;
+            font-weight: 400;
+            font-family: 'Lora', serif;
+
+            span {
+                color: $brand-green !important;
+            }
+        }
+
+        .product-section_text {
+            font-size: 18px;
+            margin: 16px 0;
+            line-height: 1.3em;
+        }
+
+    }
+
+    .product_why-bloating-grid {
+        display: flex;
+        gap: 16px;
+        margin-top: 40px;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            display: grid;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        >div {
+            width: 100%;
+        }
+
+        .product_why-bloating-cell {
+            border-radius: 6px;
+            overflow: hidden;
+            > div{
+                width: 100%;
+            }
+            img,
+            .product_why-bloat-cell-inn {
+                min-height: 150px;
+            }
+        }
+
+        .product_why-bloat-cell-inn {
+            padding: 16px;
+            text-align: center;
+            background: $bg-gray;
+            width: 100%;
+
+            p {
+                margin: 0;
+                line-height: 1.3em;
+                font-size: 16px;
+                min-height: 130px;
+            }
+
+            @media only screen and (max-width: $mobile-breakpoint) {
+                padding: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .product_arrow-img {
+        display: block;
+        width: 100%;
+        max-width: 48px;
+        margin: 24px auto;
+    }
+
+    .product_why-note-img {
+        width: 100%;
+        max-width: 920px;
+        margin: auto;
+    }
+
+    .pli_flex {
+        gap: 100px;
+
+        >div {
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            gap: 16px;
+        }
+    }
+    .product_judge-container.top_padding {
+        margin-bottom: 40px;
+
+        @media only screen and (max-width: $mobile-breakpoint) {
+            margin-bottom: 0;
+        }
+    }
+
+    .pli_top-text ul {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .pli_top-text *,
+    .pli_pink-text *,
+    .pli_bottom-text * {
+        font-size: 18px;
+        line-height: 1.3em;
+        margin: 8px 0;
+    }
+
+    .pli_top-text li {
+        padding-left: 32px;
+        color: $text-green-dark;
+        background-image: url(https://trysculptique.com/cdn/shop/files/check-mark_17013456_2_1.png?v=1760702838);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        list-style: none;
+        font-weight: 600;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .pli_pink-text {
+        margin: 24px 0;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: $bg-pink;
+    }
+
+    .pli_bottom-text li,
+    .pli_pink-text li {
+        padding-left: 32px;
+        color: $text-red-dark;
+        background-image: url(https://trysculptique.com/cdn/shop/files/Vector_7.png?v=1760702839);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        list-style: none;
+        font-weight: 600;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+        padding-bottom: 0;
+    }
+}

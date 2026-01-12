@@ -1,0 +1,127 @@
+.product_selector-content {
+    padding: 12px;
+    border-radius: 8px;
+    background: #f3eee0 !important;
+    margin-bottom: 16px;
+}
+
+.product-selector_block {
+    border: 1px solid #039869 !important;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.active {
+    .product-selector_bubble_inn {
+        background: #039869 !important;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: block !important;
+    }
+
+    .product-selector_perks .product-selector_perk_line {
+        opacity: 1;
+    }
+}
+
+.product-selector_head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+
+    >div:nth-child(1) {
+        width: 32px;
+    }
+
+    >div:nth-child(2) {
+        width: 100%;
+    }
+
+    >div:nth-child(3) {
+        width: 50%;
+        text-align: right;
+    }
+
+    .product-selector_title {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.3em;
+        font-weight: 600;
+    }
+
+    .product-selector_info {
+        font-size: 12px;
+        margin: 0;
+        line-height: 1.3em;
+    }
+
+    .product-selector_price {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.3em;
+        font-weight: 600;
+    }
+
+    .product-selector_compare {
+        font-size: 14px;
+        line-height: 1.3em;
+        margin: 0;
+        display: block;
+    }
+}
+
+.product-selector_perks {
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+
+    .product-selector_perk_line {
+        background: #039869 !important;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 8px;
+        opacity: .6;
+        border-bottom: 1px solid white;
+
+        >div:nth-child(1) {
+            width: 34px;
+        }
+
+        >div:nth-child(2) {
+            width: 100%;
+        }
+
+        p {
+            font-size: 12px;
+            color: #fff;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1em;
+        }
+    }
+
+    .product-selector_perk_line:last-child {
+        border-bottom: none;
+    }
+}
+
+.product-selector_bubble {
+    border: 2px solid #039869 !important;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .product-selector_badge {
+    position: absolute;
+    top: -20px;
+    right: -5px;
+}

@@ -1,0 +1,37 @@
+.product_icons-grid {
+    display: flex;
+    gap: 24px;
+
+    >div {
+        width: 100%;
+        text-align: center;
+    }
+
+    img {
+        width: auto;
+        height: 40px;
+        max-width: 40px;
+        display: block;
+        margin: auto auto 16px;
+    }
+
+    .h4title {
+        margin: 8px 0;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.3em;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 0;
+        line-height: 1.3em;
+    }
+
+}
+@media only screen and (max-width: 678px) {
+    .product_icons-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

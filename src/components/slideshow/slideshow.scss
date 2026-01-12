@@ -1,0 +1,136 @@
+/* Container chính */
+.sculptique-section {
+  padding: 50px 20px;
+}
+
+/* Video Card */
+.video-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 9/16;
+}
+
+.video-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Phần điều hướng phía dưới */
+.bottom-controls-wrapper {
+  display: flex;
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+  margin-top: 10px;
+  justify-content: space-between;
+  /* Căn đều hai bên */
+}
+
+/* Tùy chỉnh thanh Progress Bar */
+.custom-pagination-container {
+  position: relative !important;
+  /* Ghi đè mặc định của Swiper */
+  flex-grow: 1;
+  /* Để thanh bar chiếm hết diện tích bên trái */
+  height: 4px !important;
+  background: #e0dcd0 !important;
+  /* Màu xám nhạt của thanh nền */
+}
+
+.custom-pagination-container .swiper-pagination-progressbar-fill {
+  background: #008a5d !important;
+  /* Màu xanh đậm của thanh tiến trình */
+}
+
+/* Cụm nút Next/Prev */
+.custom-navigation-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.custom-navigation-buttons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  border: 1px solid #e0dcd0;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Khi nút bị vô hiệu hóa (ở đầu hoặc cuối slide) */
+.custom-navigation-buttons .swiper-button-disabled {
+  //   cursor: not-allowed;
+}
+
+.product_ugc-video {
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  .product_ugc-play {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+  }
+
+  video {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 9 / 16;
+    height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+}
+
+.swiper-pagination-horizontal {
+  max-width: calc(100% - 200px);
+}
+
+.Product-ugc-stars {
+  max-width: 300px;
+  margin: auto auto 16px;
+  display: block;
+}
+
+.custom-pagination-container {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1; // Chiếm toàn bộ không gian còn lại
+  gap: 10px; // Khoảng cách giữa các đoạn
+
+  li {
+    flex: 1; // Các đoạn dài bằng nhau
+    height: 4px; // Độ dày của thanh
+    background: #e0e0e0; // Màu nền mặc định (xám nhạt)
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+    border-radius: unset;
+    margin: unset !important;
+
+    button {
+      display: none; // Ẩn chữ số bên trong
+    }
+
+    // Khi slide hiện tại được chọn (Chỉ sáng đoạn này)
+    &.swiper-pagination-bullet-active {
+      background: #008a5d; // Màu xanh thương hiệu
+    }
+  }
+}
+.is-playing {
+      opacity: 0;
+      visibility: hidden;
+    }

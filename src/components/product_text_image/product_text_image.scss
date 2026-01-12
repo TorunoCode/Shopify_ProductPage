@@ -1,0 +1,22 @@
+.product_text-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    >div {
+        width: 100%;
+    }
+    .product_text-image-reviews {
+        max-width: 350px;
+    }
+@media only screen and (max-width: 678px) {
+    .product_text-image-reviews {
+        max-width: 250px;
+        margin: auto;
+        display: block;
+    }
+}
+    .btn_container {
+        max-width: 495px;
+    }
+}

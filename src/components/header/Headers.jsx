@@ -1,0 +1,12 @@
+import React from 'react'
+import './header.scss'
+
+const headers = () => {
+  return (
+    <div className='secret_header-whole'>
+      <img src="https://trysculptique.com/cdn/shop/files/gempages_567005027885909033-610eea12-3864-40f1-b0bb-802237c7296c.png?v=1756727579" alt="logo" />
+    </div>
+  )
+}
+
+export default headers;
