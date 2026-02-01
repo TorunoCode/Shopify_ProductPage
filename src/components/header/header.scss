@@ -1,10 +1,425 @@
-.secret_header-whole {
-    padding: 12px;
+// Variables
+$dark-red: #a30000;
+$text-main: #1a1a1a;
+
+.bg-dark-red {
+    background-color: $dark-red !important;
+}
+
+.text-dark-red {
+    color: $dark-red !important;
+}
+
+.announcement-bar {
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+
+.navbar {
+    .nav-link {
+        font-size: 0.9rem;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+
+        &:hover {
+            color: $dark-red !important;
+        }
+    }
+
+    .brand-logo {
+        letter-spacing: 4px;
+        // Font này nên dùng serif nếu muốn giống hệt hình
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+// Giỏ hàng hình lục giác (Hexagon icon custom)
+.cart-count {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+// Đảm bảo logo luôn ở giữa trên mobile
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+
+* {
+    --font-nb-architekt: "NB Architekt", sans-serif;
+    --font-body-family: "Aeonik", sans-serif;
+
+}
+
+.header_icon svg {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    color: #50000b !important;
+
+}
+
+.announcement-bar {
+    font-family: var(--font-nb-architekt);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: .28px;
+    text-transform: uppercase;
+    color: inherit;
     text-align: center;
 
-    img {
-        display: block;
-        max-width: 160px;
+}
+
+@media screen and (min-width: 990px) {
+    .header_left_new {
+        width: calc(50% - 50px);
+    }
+
+    .header_right_new {
+        width: calc(50% - 50px);
+        margin-right: -20px;
+        padding-right: 20px;
+    }
+
+    .header__heading-logo {
+        width: 95px;
+    }
+
+    .nav-link {
+        padding: 21px clamp(8px, 1.2vw, 20px) !important;
+        font-size: clamp(13px, 1vw, 16px) !important;
+        white-space: nowrap !important;
+        font-family: var(--font-body-family) !important;
+        padding: 21px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px !important;
+        letter-spacing: 0;
+        text-decoration: none;
+        color: #50000b !important;
+    }
+}
+
+@font-face {
+    font-family: 'NB Architekt';
+    src: url(https://cdn.shopify.com/s/files/1/0637/4460/6375/files/nb_architekt_bold-webfont.woff?v=1720189839);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url("//im8health.com/cdn/shop/files/aeonik_regular-webfont.woff2?v=12460513505982210348") format('woff2'),
+        url("//im8health.com/cdn/shop/files/aeonik_regular-webfont.woff?v=9635540714557337525") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url("//im8health.com/cdn/shop/files/Aeonik-Medium.woff2?v=5254662183358376707") format('woff2'),
+        url("//im8health.com/cdn/shop/files/Aeonik-Medium.woff?v=6258874630143427385") format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+.shop-now-bar {
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 0;
+    opacity: 0;
+    display: block;
+    transform: translateY(-100%);
+transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);    
+&.show {
+    opacity: 1;
+    position: fixed;
+    visibility: visible;
+    transform: translateY(0); // Trượt xuống vị trí cũ
+transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);    z-index: 99999;
+
+  }
+    .page-width {
+        max-width: 100% !important;
+        padding: 0 56px !important;
+        background: #50000b;
+        border-bottom: 1px solid #50000B;
+    }
+
+    .main-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 88px;
+        padding: 0 !important;
+        grid-gap: 0px;
+        max-width: 1400px !important;
+        margin-left: auto;
+        margin-right: auto;
+
+        .shop_now_bar_left_new {
+            display: flex;
+            width: calc(100% - 320px);
+            padding-right: 10px;
+            align-items: center;
+
+            img {
+                width: 137px;
+                height: 35px;
+            }
+
+            .shop_now_bar_details_new {
+                color: #fff;
+                font-size: 18px;
+                height: 100%;
+                flex-grow: 1;
+                text-align: center;
+                -webkit-text-size-adjust: 100%;
+                text-size-adjust: 100%;
+            }
+        }
+
+        .shop_now_bar_right_new {
+            width: 320px;
+
+            a,
+            span {
+                min-width: 100%;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.button {
+    border-radius: 100px;
+    background: #a40011;
+    padding: 13px 17px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: .32px;
+    text-transform: uppercase;
+    min-height: 47px;
+}
+.button:hover {
+    background: #50000b;
+}
+a:hover {
+    text-decoration: none;
+}
+
+@media (min-width: 0px) and (max-width: 749px) {
+    .shop_now_bar_details_new {
+        font-size: 11px !important;
+    }
+        .shop_now_bar_right_new {
+        width: 120px !important;
+    }
+    .shop_now_bar_left_new {
+        width: calc(100% - 120px) !important;
+    }
+    .shop-now-bar .page-width {
+        padding: 0 16px !important;
+    }
+        .shop_now_bar_right_new a, .shop_now_bar_right_new span {
+        font-size: 11px !important;
+    }
+    .header__heading-logo {
+        max-width: 94.588px;
+        margin: 16px 0;
+    }
+    .header_left_new, .header_right_new {
+        margin-right: 0;
+        padding-right: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .product {
+padding: unset !important;
+.page-width {
+    padding: unset !important;
+}
+}
+    .product__media-wrapper {
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+    }
+        .Product_template_latest_rightside_new {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 22px 20px 0 20px !important;
+    }
+    .product__title h1 {
+        font-size: 32px !important;
+        line-height: 108%;
+        letter-spacing: -.64px;
+    }
+        .no-gutters {
+        gap: 12px;
+    }
+        .variant_name_new {
+        font-size: 17px !important;
+        line-height: 100%;
+    }
+    .Common_title_new h1, .Common_title_new h2 {
+        letter-spacing: -.8px;
+        font-weight: 400;
+        line-height: 110%;
+    
+    }
+        .Index_tab_percent_studies_mainoverlay_new {
+        max-width: 100% !important;
+    }
+    .Index_tab_percent_studies_inneroverlay_innersides_mainleft_new{
+        max-width: 100% !important;
+width: 100% !important;
+    }
+    .Index_tab_percent_studies_inneroverlay_innersides_mainright_new{
+        max-width: 100% !important;
+width: 100% !important;
+    }
+    .Index_tab_percent_studies_maininfos_new {
+        padding: 20px !important;
+    }
+    .Index_tab_percent_studies_main_new {
+        padding: 56px 0 140px 0;
+    }
+        .static-reviews__description {
+        font-size: 12px !important;
+        margin-bottom: 20px;
+        max-width: 450px;
+    }
+    .Content_Header h2 {
+        font-size: clamp(24px, 7vw, 32px);
+        line-height: 110%;
+    }
+    .Card_Header h3{ line-height: 110%;}
+    .Display_Card {
+                padding: 24px 20px !important;
+    }
+        .Index_breakdown_lists_mainstatic_new {
+        width: 100% !important;
+    }
+        .Index_breakdown_lists_mainsides_new {
+        padding: 56px 0;
+    }
+    .Index_breakdown_lists_innersides_new {
+        display: block !important;
+    }
+    .Index_breakdown_lists_innersides_mainleft_new {
+        width: 100% !important;
+        padding: 0 20px !important;
+    }
+    .Index_breakdown_lists_innersides_mainright_new {
+        width: 100% !important;
+        padding: 0 !important;
+        margin-top: 94px !important;
+    }
+        .Index_breakdown_lists_innersides_innerleft_new {
+        max-width: 325px !important;
         margin: auto;
     }
+    .Index_breakdown_lists_innersides_innerleft_mainbutton_new {
+        display: none;
+    }
+    .im8-savings-badge {
+        width: clamp(140px, 38vw, 180px);
+        height: clamp(140px, 38vw, 180px);
+        left: auto;
+        right: clamp(10px, 4vw, 16px);
+        bottom: 10%;
+        transform: translateX(100%);
+        padding: 12px;
+    }
+    .Index_breakdown_lists_innersides_innerright_innercenter_innerboths_videoimage_new {
+        position: relative;
+        overflow: visible;
+    }
+        .Index_breakdown_lists_innersides_innerright_maincenter_new {
+        left: 50% !important;
+        top: -82px !important;
+        transform: translate(-50%, 0);
+        width: 107px !important;
+    }
+        .Index_breakdown_lists_innersides_innerright_innerdetail_new {
+        max-width: 100% !important;
+        margin: 0 auto;
+    }
+    .Common_inner_title_new.Index_breakdown_lists_innersides_innerright_innerdetail_innertitle_new{
+        display: none !important;
+    }
+        body .Index_breakdown_lists_innersides_innerright_innerdetail_mainloops_new {
+        padding: 100px 23px 27px 24px !important;
+        border-radius: 16px;
+        border: 1px solid #50000b;
+        background: #f5eaea;
+    }
+        .Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_mainboxs_new {
+        margin-bottom: 15px;
+    }
+    .shopify-section .Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_innerboxs_new {
+        padding-left: 22px;
+    }
+    .Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_innerboxs_infos_new p {
+        font-size: 14px;
+    }
+    .Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_innerboxs_price_new {
+        font-size: 14px;
+        letter-spacing: .28px;
+    }
+    .Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_innerboxs_new:after {
+        position: absolute;
+        content: '';
+        width: 14px;
+        height: 14px;
+        background: url(https://im8health.com/cdn/shop/t/121/assets/breakdown_check_icon.svg) no-repeat left center;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+}
+.button_inverse_primary {
+    background: #50000b !important;
+}
+.header__icon,.header_icon svg {
+    color: #a30000 !important;
+}
+.button_lightcoral_new {
+    background: #ff9693 !important;
+    color: #50000b !important;
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_innerboxs_infos_new p {
+    margin: 0;
+    color: #50000b;
+    font-size: 16px;
+    line-height: 135%;
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_innerboxs_price_new {
+    color: #50000b;
+    white-space: nowrap;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 135%;
+    letter-spacing: .32px;
+    text-transform: uppercase;
+    font-family: var(--font-nb-architekt);
+    opacity: .6;
 }

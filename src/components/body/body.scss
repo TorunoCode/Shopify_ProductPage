@@ -17,3 +17,122 @@ p {
 .text-black{
     color: black;
 }
+* {
+    --page-width: 1500px;
+}
+.page-width {
+    max-width: var(--page-width);
+    margin: 0 auto;
+}
+
+@media (min-width: 0px) and (max-width: 749px) {
+    .page-width {
+        padding: 0 20px !important;
+    }
+}
+@for $i from 1 through 100 {
+    .gap-#{$i} {
+        gap: #{$i}#{"px"} !important;
+    }
+}
+.button {
+    border-radius: 100px;
+    background: #a40011;
+    padding: 13px 17px;
+    min-width: 272px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: .32px;
+    text-transform: uppercase;
+}
+a:hover {
+    color:inherit;
+}
+@font-face {
+    font-family: 'Aeonik';
+    src:  url("//im8health.com/cdn/shop/files/aeonik_regular-webfont.woff2?v=12460513505982210348") format('woff2'),
+          url("//im8health.com/cdn/shop/files/aeonik_regular-webfont.woff?v=9635540714557337525") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Aeonik';
+    src:  url("//im8health.com/cdn/shop/files/Aeonik-Medium.woff2?v=5254662183358376707") format('woff2'),
+          url("//im8health.com/cdn/shop/files/Aeonik-Medium.woff?v=6258874630143427385") format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'ABC Arizona Flare';
+    src:  url("//im8health.com/cdn/shop/files/ABCArizonaFlare-Light.woff2?v=11368922346653382944") format('woff2'),
+          url("//im8health.com/cdn/shop/files/ABCArizonaFlare-Light.woff?v=4919727682615412285") format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'ABC Arizona Flare';
+    src:  url("//im8health.com/cdn/shop/files/ABCArizonaFlare-Regular.woff2?v=5952139655696401591") format('woff2'),
+          url("//im8health.com/cdn/shop/files/ABCArizonaFlare-Regular.woff?v=17401789925453593962") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'ABC Arizona Flare';
+    src:  url("//im8health.com/cdn/shop/files/ABCArizonaFlare-Medium.woff2?v=5523411282462462931") format('woff2'),
+          url("//im8health.com/cdn/shop/files/ABCArizonaFlare-Medium.woff?v=1151062903811322684") format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'ABC Arizona Flare';
+    src:  url("//im8health.com/cdn/shop/files/ABCArizonaFlare-Bold.woff2?v=1940469715540154152") format('woff2'),
+          url("//im8health.com/cdn/shop/files/ABCArizonaFlare-Bold.woff?v=6559947587640107759") format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+
+  @font-face {
+    font-family: 'NB Architekt';
+    src:  url("//im8health.com/cdn/shop/files/nb_architekt_light-webfont.woff2?v=1919209328747479563") format('woff2'),
+          url("//im8health.com/cdn/shop/files/nb_architekt_light-webfont.woff?v=12653660277270904596") format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'NB Architekt';
+    src:  url("//im8health.com/cdn/shop/files/nb_architekt_regular-webfont.woff2?v=14139702887360922506") format('woff2'),
+          url("//im8health.com/cdn/shop/files/nb_architekt_regular-webfont.woff?v=5746192009211289463") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'NB Architekt';
+    src:  url("//im8health.com/cdn/shop/files/nb_architekt_bold-webfont.woff2?v=14998712681787258285") format('woff2'),
+          url("//im8health.com/cdn/shop/files/nb_architekt_bold-webfont.woff?v=612185585488115032") format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+@media screen and (max-width: 750px) {
+html,body {
+  overflow-x: hidden;
+}
+}

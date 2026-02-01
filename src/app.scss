@@ -14,6 +14,7 @@ html {
     --jdgm-star-color: #FA8A8A;
     --jdgm-secondary-color: rgba(250, 138, 138, 0.1);
     --jdgm-primary-color: #FA8A8A;
+    --font-heading-family: "ABC Arizona Flare", sans-serif;
 }
 
 :root {
@@ -88,7 +89,6 @@ h5,
 }
 
 .page-width {
-    max-width: 1340px !important;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -198,6 +198,8 @@ p {
 .w-70 {
     width: 70%;
 }
-html, body{
-    overflow-x: hidden;
+@media (min-width: 0px) and (max-width: 749px) {
+    .page-width {
+        padding: 0 20px !important;
+    }
 }

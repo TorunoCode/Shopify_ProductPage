@@ -1,0 +1,489 @@
+// --- Variables & Design Tokens ---
+$burgundy: linear-gradient(145deg, 
+      var(--ph-red-algae) 0%, 
+      var(--ph-burgundy) 60%,
+      var(--ph-burgundy-dark) 100%
+    );
+$bronze-gradient:linear-gradient(145deg, 
+      var(--ph-gold) 0%, 
+      var(--ph-gold-dark) 70%,
+      #3A0000 100%
+    );
+$bg-light: #fdf4f4;
+$text-main: #50000B;
+$text-muted: #50000B;
+$white: #ffffff;
+$transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+* {
+    --ph-text-primary:#50000B;
+    --ph-burgundy: #50000B;
+    --ph-burgundy-light: #7B1E2A;
+    --ph-burgundy-dark: #3A0008;
+    --ph-red-algae: #A40011;
+    --ph-red-algae-light: #C41523;
+    --ph-flamingo: #FF9693;
+    --ph-dawn-pink: #F5EAEA;
+    --ph-gold: #E78D2D;
+    --ph-gold-light: #F5A855;
+    --ph-gold-dark: #3A0000;
+}
+// --- Mixins ---
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Pillars_Section {
+  padding: 80px 5%;
+  font-family: 'Inter', sans-serif;
+  background-image: radial-gradient(circle at center, rgba(80, 0, 11, 0.03) 0%, transparent 70%),
+                    linear-gradient(rgba(80, 0, 11, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(80, 0, 11, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px; // The clinical grid effect
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+
+  // Change background tint when in Longevity mode
+//   &.longevity {
+//     background-image: radial-gradient(
+//       circle,
+//       rgba(232, 163, 23, 0.5) 0%,
+//       rgba(232, 163, 23, 0.2) 30%,
+//       rgba(232, 163, 23, 0.05) 60%,
+//       transparent 80%
+//     ),
+//     linear-gradient(rgba(80, 0, 11, 0.05) 1px, transparent 1px),
+//     linear-gradient(90deg, rgba(80, 0, 11, 0.05) 1px, transparent 1px);
+//   }
+
+//   &.essentials {
+//     background-image: radial-gradient(
+//       circle,
+//       rgba(164, 0, 17, 0.5) 0%,
+//       rgba(164, 0, 17, 0.25) 30%,
+//       rgba(164, 0, 17, 0.08) 60%,
+//       transparent 80%
+//     ),
+//     linear-gradient(rgba(80, 0, 11, 0.05) 1px, transparent 1px),
+//     linear-gradient(90deg, rgba(80, 0, 11, 0.05) 1px, transparent 1px);
+//   }
+&.longevity {
+    background-image: url(https://im8health.com/cdn/shop/files/Screenshot_2025-12-22_at_7.45.28_PM.png?v=1766404140&width=1200);
+  background-size: cover;
+    background-position:bottom left;
+    background-repeat: no-repeat;  
+}
+
+  &.essentials {
+    background-image: url(https://im8health.com/cdn/shop/files/Screenshot_2025-12-22_at_7.44.31_PM.png?v=1766404140&width=1200);
+    background-size: cover;
+    background-position:bottom left;
+    background-repeat: no-repeat;
+  }
+
+  // --- Top Switcher ---
+  .Switch_Container {
+    position: relative;
+    display: flex;
+    background: $white;
+    border: 1px solid #eee;
+    padding: 6px;
+    border-radius: 100px;
+    width: fit-content;
+    margin: 0 auto 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    .Slider_Bg {
+      position: absolute;
+      top: 6px;
+      bottom: 6px;
+      left: 6px;
+      width: calc(50% - 6px);
+      border-radius: 100px;
+      z-index: 1;
+      transition: $transition-smooth;
+        color: var(--ph-burgundy);
+      &.essentials {
+        background: $burgundy;
+        transform: translateX(0);
+      }
+      &.longevity {
+        background: $bronze-gradient;
+        transform: translateX(100%);
+      }
+    }
+
+    button {
+      position: relative;
+      z-index: 2;
+      border: none;
+      background: none;
+      padding: 14px 35px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ph-burgundy);
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &.active {
+        color: $white;
+      }
+    }
+  }
+
+  // --- Header Area ---
+  .Pillars_Header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+
+    .Badge {
+      display: inline-block;
+      background: $burgundy;
+      color: $white;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(80, 0, 11, 0.2);
+       &.longevity {
+        background: $bronze-gradient;
+      }
+    }
+
+    h2 {
+     font-family: 'ABC Arizona Flare', 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-size: clamp(32px, 6vw, 56px);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--ph-text-primary);
+    margin: 0 0 20px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    }
+
+    p {
+     font-family: 'Aeonik', sans-serif;
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 400;
+    color: var(--ph-text-primary);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0.9;
+    }
+  }
+
+  // --- Main Layout ---
+  .Pillars_Layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // --- Navigation List ---
+  .Pillars_Nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .Nav_Card {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background:linear-gradient(145deg, 
+      rgba(255, 255, 255, 0.95) 0%, 
+      rgba(245, 234, 234, 0.9) 50%,
+      rgba(255, 240, 240, 0.85) 100%
+    );
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 18px;
+      text-align: left;
+      cursor: pointer;
+      transition: $transition-smooth;
+             position: relative;
+      .Card_Icon {
+        @include flex-center;
+        width: 50px;
+        height: 50px;
+        background:linear-gradient(135deg, rgba(80, 0, 11, 0.06) 0%, rgba(80, 0, 11, 0.02) 100%);
+        border-radius: 12px;
+        font-size: 22px;
+        margin-right: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        color: $text-main;
+         &.longevity {
+        color: var(--ph-gold);
+         }
+      }
+.pillars-health__nav-line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0;
+    background:white;
+    border-radius: 0 4px 4px 0;
+    transition: height var(--ph-duration-normal) var(--ph-ease-out);
+    height: 60%;
+}
+.pillars-health__nav-arrow {
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translateX(-8px);
+    color: var(--ph-burgundy);
+    transition: all var(--ph-duration-normal) var(--ph-ease-out);
+    opacity: 0.8;
+    transform: translateX(0);
+    color: transparent;
+    position: absolute;
+    right: 5%;
+    transition: transform 0.3s ease;
+
+}
+      .Card_Text {
+        .T { display: block; font-weight: 600; font-size: 15px; color: $text-main; margin-bottom: 4px; }
+        .S { font-size: 12px; color: $text-muted;  }
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        // background:linear-gradient(135deg, rgba(80, 0, 11, 0.06) 0%, rgba(80, 0, 11, 0.02) 100%);
+.pillars-health__nav-arrow {
+color: $text-main;
+    transition: transform 0.3s ease;
+
+}
+      }
+
+      &.active {
+        background: $burgundy;
+        border-color: $burgundy;
+        box-shadow: 0 15px 30px rgba(80, 0, 11, 0.15);
+          .pillars-health__nav-arrow {
+color: white !important;
+    transition: transform 0.3s ease;
+
+}
+        &.longevity {
+        background: $bronze-gradient;
+        border: 1px solid $bronze-gradient;
+      
+      }
+
+        .T, .S { color: $white; }
+        .Card_Icon { background: rgba($white, 0.2); color: $white; }
+      }
+    }
+  }
+
+  // --- Main Display Card ---
+  .Main_Display {
+    background: rgba($white, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba($white, 0.5);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    animation: slideUp 0.5s ease-out;
+
+    .Display_Icon_Box {
+      @include flex-center;
+      width: 80px;
+      height: 80px;
+      background:linear-gradient(135deg, rgba(80, 0, 11, 0.06) 0%, rgba(80, 0, 11, 0.02) 100%);
+      border-radius: 20px;
+      font-size: 32px;
+      margin-bottom: 30px;
+        color: var(--ph-burgundy);
+      
+       &.longevity {
+        color: var(--ph-gold);
+        border-color: var(--ph-gold);
+      }
+    }
+
+    h3 {
+      font-size: 36px;
+      color: $text-main;
+      margin-bottom: 12px;
+      font-weight: 500;
+      line-height: 110%;
+    }
+
+    .Sub {
+      font-family: 'Aeonik', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ph-burgundy);
+    opacity: 0.7;
+    }
+
+    .Divider {
+      width: 100%;
+      height: 1px;
+      background: $burgundy;
+      margin-bottom: 40px;
+    }
+
+    .Ingredients {
+      .Label {
+        font-size: 12px;
+        font-weight: 800;
+        color: $text-main;
+        margin-bottom: 25px;
+      }
+
+      .Ing_Item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 15px;
+        color: $text-muted;
+
+        span {
+          color: $burgundy;
+          font-weight: bold;
+          margin-right: 12px;
+        }
+      }
+    }
+.pillars-health__panel-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: var(--ph-burgundy);
+    color: white;
+    font-family: 'Aeonik', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 100px;
+    box-shadow: 0 2px 8px rgba(80, 0, 11, 0.2);
+     &.longevity {
+        background: var(--ph-gold);
+      }
+}
+    .Watermark {
+      position: absolute;
+      top: -20px;
+      right: -10px;
+      font-size: 220px;
+      color: $burgundy;
+      font-style: italic;
+      line-height: 1;
+      pointer-events: none;
+      color: rgba(80, 0, 11, 0.025);
+    }
+  }
+}
+
+// --- Keyframes ---
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+// Variables
+$burgundy-text: #50000b;
+$description-text: #4a4a4a;
+$card-bg: #ffffff;
+$icon-bg: #fff9f5; // Very light peach/orange tint
+
+.Longevity_Quality_Section {
+  padding: 80px 5%;
+  // This simulates the dark leather/textured background in the image
+  display: flex;
+  justify-content: center;
+
+  .Quality_Card_Container {
+    display: flex;
+    gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .Quality_Card {
+    background: $card-bg;
+    border-radius: 24px; // Large rounded corners as seen in image
+    padding: 48px 32px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    color: $text-muted;
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .Icon_Wrapper {
+      width: 56px;
+      height: 56px;
+      background: $icon-bg;
+      border-radius: 14px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .Abstract_Icon {
+        // Styling for the geometric icons
+        width: 32px;
+        height: 32px;
+        &.longevity {
+            color: var(--ph-gold);
+        }
+      }
+    }
+
+    h4 {
+      color: $burgundy-text;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+     color: $text-muted;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0 10px;
+    }
+  }
+}
+.pillars-health__panel-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    
+    .pillars-health__panel-meta-line {
+    width: 32px;
+    height: 1px;
+    background: var(--ph-burgundy);
+    opacity: 0.4;
+    flex-shrink: 0;
+   
+}
+}

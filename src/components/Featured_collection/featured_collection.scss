@@ -1,0 +1,391 @@
+$brand-red: #A40011;
+$dark-red: #50000B;
+$bg-cream: #FDF9F6; // Màu nền kem nhạt từ ảnh
+
+.premium-nutrition {
+  padding-top: 104px;
+        padding-bottom: 40px;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+
+  .section-header {
+    text-align: left;
+    margin-bottom: 40px;
+
+    h2 {
+      color: $dark-red;
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .trust-badges {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+      color: $dark-red;
+      
+      span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        &:before { content: '✔'; color: $brand-red; font-weight: bold; }
+      }
+    }
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @media (max-width: 992px) { grid-template-columns: 1fr; }
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+
+    .image-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .badge-ribbon {
+      position: absolute;
+    top: 20px;
+    right: 20px;
+    
+    // Kích thước cố định khớp với hình ảnh
+    width: 64px;
+    height: 64px;
+    
+    // Hình nền SVG
+    background: url(https://im8health.com/cdn/shop/t/121/assets/whole_badge.svg) no-repeat center;
+    background-size: contain;
+    
+    // Căn giữa văn bản
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    
+    // Typography
+    color: white;
+    font-size: 9px !important;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    
+    // ĐIỀU CHỈNH QUAN TRỌNG: 
+    // Thêm padding-bottom để đẩy chữ xuống trung tâm của khối đa giác (không tính phần đuôi nhọn)
+    padding-bottom: 8px !important; 
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    
+    box-sizing: border-box;
+    z-index: 10;
+      }
+
+      .add-to-cart {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(255,255,255,0.9);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+    }
+  
+}
+.featured_collection_section {
+  padding: 60px 0;
+  
+  .product_grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .product_card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      
+      .product_card__atc-btn {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .product_card__image--main {
+        opacity: 0;
+      }
+      .product_card__image--hover {
+        opacity: 1;
+      }
+    }
+
+    &__image-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      aspect-ratio: 1 / 1;
+      background-color: #f4f4f4;
+
+      .product_card__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity .85s cubic-bezier(.19, 1, .22, 1), transform .85s cubic-bezier(.19, 1, .22, 1), filter .85s cubic-bezier(.19, 1, .22, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        perspective: 1000px;
+      }
+
+      .product_card__image--main {
+        opacity: 1;
+        z-index: 1;
+        filter: blur(0px) brightness(1);
+      }
+
+      .product_card__image--hover {
+        opacity: 0;
+        z-index: 2;
+            filter: blur(0px) brightness(1);
+      }
+      
+      &:hover .product_card__image {
+            transform: translateZ(0) scale(1);
+      }
+    }
+
+    &__atc-btn {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      width: calc(100% - 20px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 3;
+      background-color: #50000b;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: #3d000a;
+      }
+    }
+
+    &__info {
+      text-align: left;
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #50000b;
+      line-height: 1.3;
+    }
+
+    &__description {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    &__price {
+      font-size: 16px;
+      font-weight: 600;
+      color: #50000b;
+    }
+  }
+  
+  // Styles for tags and badges
+  .badge-ribbon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #a40011;
+    color: white;
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    z-index: 3;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    
+    &.tag-red {
+      background-color: #ffe5e5;
+      color: #d32f2f;
+    }
+    &.tag-orange {
+      background-color: #fff3e0;
+      color: #f57c00;
+    }
+    &.tag-ritual {
+      background-color: #e0f7fa;
+      color: #006064;
+    }
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    
+    h2 {
+      font-size: 32px;
+      color: #50000b;
+      margin-bottom: 16px;
+    }
+    
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      
+      span {
+        font-size: 14px;
+        color: #50000b;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  }
+}
+
+$brand-red: #A40011;
+$dark-red: #50000B;
+
+.product-card {
+  .image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease;
+    }
+
+    .hover-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0; // Ẩn ảnh hover mặc định
+    }
+
+    .add-to-cart {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      color: black;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 12px;
+      z-index: 2;
+      opacity: 0; // Ẩn nút mặc định
+      transform: translateY(10px); // Đẩy xuống một chút để tạo hiệu ứng trượt lên
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $brand-red;
+        color: white;
+      }
+    }
+
+    // Hiệu ứng khi Hover vào card
+    &:hover {
+      .main-img {
+        opacity: 0; // Ẩn ảnh chính
+      }
+      .hover-img {
+        opacity: 1; // Hiện ảnh phụ
+        transform: scale(1.05); // Phóng nhẹ ảnh tạo cảm giác cao cấp
+      }
+      .add-to-cart {
+        opacity: 1; // Hiện nút ATC
+        transform: translateY(0); // Trượt về vị trí cũ
+      }
+    }
+  }
+
+  .product-info {
+        padding: 16px 0 19px 0;
+    .tag {
+      display: inline-block;
+      padding: 8px 16px;
+    margin-bottom: 12px;
+    border-radius: 24px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    width: auto;
+    max-width: fit-content;
+    text-align: left;
+      &.tag-red { background: $brand-red; }
+      &.tag-orange { background:linear-gradient(90deg,#a40011,#ad020a,#b50503,#bd1105,#c51f08,#cd2d0a,#d43b0d,#dc4b0f,#e35b12,#ea6b16,#e87d22,#e78d2d); }
+      &.tag-ritual { background: linear-gradient(90deg,#a40011,#ad020a,#b50503,#bd1105,#c51f08,#cd2d0a,#d43b0d,#dc4b0f,#e35b12,#ea6b16,#e87d22,#e78d2d); }
+    }
+    h3 { color: #50000b !important;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 108%;
+    font-family: var(--font-heading-family);
+    letter-spacing: -.48px;
+    margin: 0 !important;
+    padding-top: 0; }
+    p { line-height:135%; padding-top: 8px; 
+      font-size: 14px;  color: #50000b !important; margin-bottom: 5px; }
+    .price { margin: 4px 0 0 0 !important;
+    color: #50000b !important;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 135%; }
+  }
+}

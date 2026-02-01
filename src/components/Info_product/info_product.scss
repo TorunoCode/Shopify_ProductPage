@@ -1,0 +1,524 @@
+  .Index_breakdown_lists_innerstatic_videoimage_new {
+    position: relative; /* Establishes a stacking context */
+  }
+  .Index_breakdown_lists_main_new {
+    position: relative;
+        background-color: #f5eaea;
+
+  }
+  .Index_breakdown_lists_mainstatic_new {
+    width: 46.667%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    .Index_breakdown_lists_innerstatic_new {
+    height: 100%;
+   
+}
+}
+.Index_breakdown_lists_innersides_innerleft_new {
+    max-width: 350px;
+}
+ .Index_breakdown_lists_innerstatic_videoimage_new {
+    height: 100%;
+    position: relative;
+    img {width: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100% !important;}
+}
+.Index_breakdown_lists_innersides_innerright_innercenter_innerboths_videoimage_new {
+    img {
+        height: auto;
+    }
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_mainboxs_new:after {
+    position: absolute;
+    content: '';
+    width: 64px;
+    height: 1px;
+    background: #50000b;
+    top: 50%;
+    left: -91px;
+    transform: translate(0, -50%);
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_innerboxs_new {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_innerloops_mainboxs_new:before {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: url(https://im8health.com/cdn/shop/t/121/assets/shape.svg) no-repeat center center;
+    transform: translate(0, -50%);
+    top: 50%;
+    left: -29px;
+}
+.Index_breakdown_lists_mainsides_new {
+    position: relative;
+    z-index: 2;
+    .Index_breakdown_lists_innersides_new {
+    display: flex;
+    .Index_breakdown_lists_innersides_mainleft_new {
+    width: 46.667%;
+    padding: 64px 0 0 56px;
+}
+.Index_breakdown_lists_innersides_mainright_new {
+    width: calc(100% - 46.667%);
+    padding: 80px 168px 64px 168px;
+    position: relative;
+}
+.Index_breakdown_lists_innersides_innerright_new {
+    display: flex;
+    align-items: center;
+}
+.Index_breakdown_lists_innersides_innerright_maincenter_new {
+    position: absolute;
+    left: -189px;
+    top: 82px;
+    width: 378px;
+}
+}
+}
+@media screen and (min-width: 1400px) {
+    .Index_breakdown_lists_innersides_innerright_maindetail_new {
+        min-width: 500px;
+    }
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_new {
+    max-width: 86.81%;
+    margin: 0 0 0 auto;
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_mainloops_new {
+    padding-top: 56px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-left: 33px;
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_maintexts_new {
+    padding-top: 32px;
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_innertexts_new {
+    border-radius: 16px;
+    border: 1px solid #50000b;
+    background: #f5eaea;
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_innertexts_1_sides_new {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 25px 11px 33px;
+    .Index_breakdown_lists_innersides_innerright_innerdetail_innertexts_1_sides_pricetext_new {
+    color: #50000b;
+    text-align: right;
+    font-family: var(--font-nb-architekt);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 135%;
+    letter-spacing: .32px;
+    text-transform: uppercase;
+}
+}
+.Index_breakdown_lists_innersides_innerright_innerdetail_innertexts_2_new {
+    border-radius: 0 0 16px 16px;
+    border-top: 1px solid #50000b;
+    background: #fff;
+}.Index_breakdown_lists_innersides_innerright_innerdetail_innertexts_2_sides_new {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 25px 16px 33px;
+    .Index_breakdown_lists_innersides_innerright_innerdetail_innertexts_2_sides_pricetext_new {
+    color: #50000b;
+    text-align: right;
+    font-family: var(--font-nb-architekt);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 135%;
+    letter-spacing: .32px;
+    text-transform: uppercase;
+}
+}
+.Index_breakdown_lists_innersides_innerleft_mainbutton_new {
+    padding-top: 24px;
+}
+
+.Index_breakdown_lists_innersides_innerright_innerdetail_mainbutton_new {
+    display: none;
+    padding-top: 21px;
+    text-align: center;
+}
+.im8-savings-badge {
+    position: absolute;
+    left: 0;
+    bottom: 6%;
+    transform: translate(calc(-75% - 16px), 0);
+    background: #50000B;
+    color: #FFF;
+    border-radius: 999px;
+    width: clamp(220px, 24vw, 300px);
+    height: clamp(220px, 24vw, 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 18px;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(80, 0, 11, 0.25);
+    pointer-events: none;
+    .im8-savings-badge__title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.95;
+    margin-bottom: 20px;
+}
+.im8-savings-badge__per, .im8-savings-badge__amount {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.15;
+    font-family: 'ABC Arizona Flare', sans-serif;
+}
+.im8-savings-badge__per {
+    margin-bottom: 20px;
+}
+
+.im8-savings-badge__footnote {
+    font-size: 13px;
+    line-height: 1.3;
+    opacity: 0.9;
+}
+}
+.button {
+    border-radius: 100px;
+    background: #a40011;
+    padding: 13px 17px;
+    min-width: 272px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: .32px;
+    text-transform: uppercase;
+    min-height: 47px;
+}
+
+  .Index_breakdown_lists_innerstatic_videoimage_new::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Apply an opacity to the specified background color #f5eaea */
+    /* You can adjust the 0.7 (70% opacity) value as needed (from 0.0 to 1.0) */background-color: rgba(245, 234, 234, 0.7);z-index: 1; /* Ensures the overlay is on top of other content within this div */
+    pointer-events: none; /* Allows clicks to pass through to underlying elements like video controls, if any */
+  }
+
+  /* Ensure video/image elements are rendered below the overlay. */
+  /* This is a safeguard; direct children typically render below pseudo-elements with higher z-index. */
+  .Index_breakdown_lists_innerstatic_videoimage_new > video,
+  .Index_breakdown_lists_innerstatic_videoimage_new > img,
+  .Index_breakdown_lists_innerstatic_videoimage_new > .shopify-video-wrapper, /* Common wrapper from Shopify's video_tag */
+  .Index_breakdown_lists_innerstatic_videoimage_new > .media /* Another common media wrapper */ {
+    position: relative; /* Necessary for z-index to take effect on these elements */
+    z-index: 0; /* Places these elements below the ::before pseudo-element which has z-index: 1 */
+  }
+
+  /* Ensure the jar media wrapper can host the absolute badge */
+  .Index_breakdown_lists_innersides_innerright_innercenter_innerboths_videoimage_new { position: relative; }
+
+  /* Savings badge styles */
+  .im8-savings-badge {
+    position: absolute;
+    left: 0;
+    bottom: 6%;
+    /* Keep to the left of the jar with a slight overlap feel */
+    transform: translate(calc(-75% - 16px), 0);
+    background: #50000B;
+    color: #FFF;
+    border-radius: 999px;
+    width: clamp(220px, 24vw, 300px);
+    height: clamp(220px, 24vw, 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 18px;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(80,0,11,0.25);
+    pointer-events: none;
+  }
+
+  .im8-savings-badge__title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.95;
+    margin-bottom: 20px;
+  }
+
+  .im8-savings-badge__per,
+  .im8-savings-badge__amount {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.15;
+    font-family: 'ABC Arizona Flare', sans-serif;
+  }
+
+  .im8-savings-badge__per {
+    margin-bottom: 20px;
+  }
+
+  .im8-savings-badge__footnote {
+    font-size: 13px;
+    line-height: 1.3;
+    opacity: 0.9;
+  }
+  /* Default: show desktop footnote, hide mobile variant */
+  .im8-savings-badge__footnote .badge-footnote--desktop { display: inline; }
+  .im8-savings-badge__footnote .badge-footnote--mobile { display: none; }
+
+  @media screen and (max-width: 1200px) {
+    .im8-savings-badge {
+      width: clamp(200px, 24vw, 240px);
+      height: clamp(200px, 24vw, 240px);
+      transform: translate(calc(-58% - 12px), 0);
+      bottom: 4%;
+      padding: 16px;
+    }
+    .im8-savings-badge__amount { font-size: 28px; }
+    .im8-savings-badge__per { font-size: 16px; }
+    /* Tighter spacing for small desktop */
+    .im8-savings-badge__title { margin-bottom: 12px; }
+    .im8-savings-badge__per { margin-bottom: 10px; }
+  }
+
+  /* Small desktop guard: avoid overlapping heading/CTA */
+  @media screen and (max-width: 1440px) {
+    .im8-savings-badge {
+      width: clamp(210px, 23vw, 250px);
+      height: clamp(210px, 23vw, 250px);
+      transform: translate(calc(-65% - 14px), 0);
+      bottom: 4%;
+    }
+    .im8-savings-badge__per, .im8-savings-badge__amount { font-size: 27px; }
+  }
+
+  /* Guard for ~1300px small desktop */
+  @media screen and (max-width: 1300px) {
+    .im8-savings-badge {
+      width: clamp(155px, 18.5vw, 190px);
+      height: clamp(155px, 18.5vw, 190px);
+      transform: translate(calc(-52% - 30px), 0);
+      bottom: 0%;
+      padding: 12px;
+    }
+    .im8-savings-badge__amount { font-size: 22px; }
+    .im8-savings-badge__per { font-size: 13px; }
+    .im8-savings-badge__footnote { font-size: 11px; }
+    .im8-savings-badge__title { margin-bottom: 10px; }
+    .im8-savings-badge__per { margin-bottom: 8px; }
+  }
+
+  /* Small desktop/tablet landscape (~1000px and below) */
+  @media screen and (max-width: 1024px) {
+    .im8-savings-badge {
+      width: clamp(160px, 19vw, 200px);
+      height: clamp(160px, 19vw, 200px);
+      transform: translate(calc(-52% - 30px), 0);
+      bottom: -6%; /* drop further so it doesn’t cover CTA/heading */
+      padding: 12px;
+    }
+    .im8-savings-badge__amount { font-size: 20px; }
+    .im8-savings-badge__per { font-size: 14px; }
+    .im8-savings-badge__footnote { font-size: 11px; }
+    .im8-savings-badge__title { margin-bottom: 8px; }
+    .im8-savings-badge__per { margin-bottom: 8px; }
+  }
+
+  @media screen and (max-width: 749px) {
+    /* Keep badge to the right side of jar; scale by viewport to avoid covering */
+    .Index_breakdown_lists_innersides_innerright_innercenter_innerboths_videoimage_new { position: relative; overflow: visible; }
+    .im8-savings-badge {
+      width: clamp(140px, 38vw, 180px);
+      height: clamp(140px, 38vw, 180px);
+      left: auto;
+      right: clamp(10px, 4vw, 16px);
+      bottom: 10%;
+      transform: translateX(100%);
+      padding: 12px;
+    }
+    .im8-savings-badge__title { font-size: 12px; }
+    .im8-savings-badge__amount { font-size: clamp(16px, 5.6vw, 18px); }
+    .im8-savings-badge__per { font-size: clamp(12px, 4vw, 14px); }
+    .im8-savings-badge__footnote { font-size: clamp(10px, 3.4vw, 11px); }
+    .im8-savings-badge__footnote .badge-footnote--desktop { display: none; }
+    .im8-savings-badge__footnote .badge-footnote--mobile { display: inline; }
+    /* Tighter spacing on mobile */
+    .im8-savings-badge__title { margin-bottom: 8px; }
+    .im8-savings-badge__per { margin-bottom: 6px; }
+  }
+
+  @media screen and (max-width: 390px) {
+    .im8-savings-badge {
+      left: auto;
+      right: clamp(8px, 5vw, 14px);
+      transform: translateX(100%);
+      bottom: 12%;
+    }
+    .im8-savings-badge__amount { font-size: clamp(15px, 5vw, 17px); }
+  }
+
+  /* Ultra-small phones (fits down to 320px wide) */
+  @media screen and (max-width: 400px) {
+    .im8-savings-badge {
+      width: clamp(120px, 36vw, 150px);
+      height: clamp(120px, 36vw, 150px);
+      right: clamp(8px, 5vw, 14px);
+      padding: 10px;
+    }
+    .im8-savings-badge__title { font-size: 10px; margin-bottom: 6px; }
+    .im8-savings-badge__amount { font-size: clamp(14px, 5.2vw, 16px); white-space: nowrap; }
+    .im8-savings-badge__per { font-size: clamp(10px, 3.6vw, 12px); margin-bottom: 4px; }
+    .im8-savings-badge__footnote { font-size: clamp(9px, 3.2vw, 10px); }
+  }
+
+
+
+  @media screen and (min-width: 1400px) {
+    .Index_breakdown_lists_innersides_innerright_maindetail_new {
+      min-width: 500px;
+    }
+  }
+
+  /* Breakdown Popup Styles */
+  .breakdown_popup_button_container {
+    margin-top: 16px;
+  }
+  .Index_breakdown_lists_innerstatic_new {
+    height: 100%;
+}
+.Common_inner_title_new h2 {
+    color: #50000b;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -.8px;
+    margin: 0;
+}
+  .breakdown_popup_trigger {
+    border-radius: 100px;
+    background: #A40011;
+    padding: 13px 17px;
+    min-width: 272px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+
+  .breakdown_popup_trigger:hover {
+    background: #50000B;
+  }
+
+  /* Desktop only margin for breakdown popup trigger */
+  @media screen and (min-width: 750px) {
+    .breakdown_popup_trigger {
+      margin-top: 20px;
+    }
+  }
+
+  /* Use existing product media modal styling */
+  .breakdown-popup-modal {
+    background: rgba(242, 224, 221, 0.50);
+    backdrop-filter: blur(8px);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                visibility 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                backdrop-filter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .breakdown-popup-modal[open] {
+    visibility: visible;
+    opacity: 1;
+    z-index: 10000 !important; /* Match our modal z-index override */
+  }
+
+  /* Override popup slider height to match exact product modal sizing */
+  .breakdown-popup-modal .Product_popup_slider .swiper-slide {
+    height: 96vh !important;
+    z-index: 1 !important; /* Lower than close button */
+    position: relative;
+  }
+
+
+
+  /* Dialog styling for breakdown popup */
+  .breakdown-popup-modal .product-media-modal__dialog {
+    background: 0 0 !important;
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Content transitions */
+  .breakdown-popup-modal .product-media-modal__content {
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .breakdown-popup-modal[open] .product-media-modal__content {
+    transform: scale(1);
+  }
+
+  /* Close button transition - ONLY for breakdown popup modal */
+  .breakdown-popup-modal .product-media-modal__toggle {
+    z-index: 999 !important; /* Higher than swiper slides */
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s,
+                transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+  }
+
+  .breakdown-popup-modal[open] .product-media-modal__toggle {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Ensure slider container has lower z-index - ONLY for breakdown popup modal */
+  .breakdown-popup-modal .Product_popup_slider_main_new {
+    position: relative;
+    z-index: 1 !important;
+  }
